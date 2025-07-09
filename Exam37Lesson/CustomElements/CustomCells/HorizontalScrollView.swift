@@ -79,14 +79,14 @@ private extension HorizontalScrollView {
         )
         
         NSLayoutConstraint.activate([
-            categoryLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 80),
+            categoryLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             categoryLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 13),
             categoryLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -13),
             
-            scrollView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 120),
+            scrollView.topAnchor.constraint(equalTo: categoryLabel.bottomAnchor, constant: 20),
             scrollView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            scrollView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.7),
+            scrollView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -60),
             
             stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 13),
             stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -13),

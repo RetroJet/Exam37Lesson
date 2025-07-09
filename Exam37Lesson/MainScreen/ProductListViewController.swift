@@ -19,7 +19,7 @@ class ProductListController: UITableViewController {
     
     //MARK: -> UITableViewDelegate
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        tableView.bounds.height * 0.30
+        tableView.bounds.height * 0.33
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -71,7 +71,7 @@ private extension ProductListController {
         tableView.separatorStyle = .none
         tableView.isScrollEnabled = false
         tableView.register(HorizontalScrollView.self, forCellReuseIdentifier: identifier)
+        
+        tableView.contentInset = UIEdgeInsets(top: 55, left: 0, bottom: 0, right: 0)
     }
 }
-
-
